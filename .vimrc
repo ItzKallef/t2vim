@@ -7,11 +7,11 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 
 Plug 'ctrlpvim/ctrlp.vim'           " fuzzy find files
-
+Plug 'Valloric/YouCompleteMe'
 Plug 'preservim/nerdtree'
-
+Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
 Plug 'tomasiser/vim-code-dark'
-
+Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf'                 " remove lambda syntax
 
 Plug 'junegunn/fzf.vim'
@@ -23,6 +23,7 @@ call plug#end()
 
 
 " Basic settings
+
 
 set nocompatible
 
@@ -148,4 +149,8 @@ vnoremap <leader>c :call nerdcommenter#Comment(0, "toggle")<CR>
 
 let g:fzf_action = { 'abort': ['ctrl-c', 'ctrl-g', 'esc'] }
 
-
+highlight Pmenu      ctermfg=white ctermbg=black guifg=#ffffff guibg=#000000
+highlight PmenuSel   ctermfg=black ctermbg=white guifg=#000000 guibg=#ffffff
+highlight PmenuSbar  ctermbg=black guibg=#000000
+highlight PmenuThumb ctermbg=white guibg=#ffffff
+let g:NERDTreeNodeDelimiter = "\u00a0"
